@@ -34,6 +34,7 @@
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.lbEdad = new System.Windows.Forms.Label();
             this.panelRadioB = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbOtro = new System.Windows.Forms.RadioButton();
             this.rbFemenino = new System.Windows.Forms.RadioButton();
@@ -44,12 +45,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tcPreferencias = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tcVisualizacion = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label7 = new System.Windows.Forms.Label();
             this.tcDatospersonales.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.panelRadioB.SuspendLayout();
+            this.tcPreferencias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDatospersonales
@@ -95,7 +104,6 @@
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(120, 22);
             this.nudEdad.TabIndex = 11;
-            this.nudEdad.ValueChanged += new System.EventHandler(this.nudEdad_ValueChanged);
             // 
             // lbEdad
             // 
@@ -118,6 +126,15 @@
             this.panelRadioB.Name = "panelRadioB";
             this.panelRadioB.Size = new System.Drawing.Size(265, 153);
             this.panelRadioB.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Genero";
             // 
             // rbMasculino
             // 
@@ -202,32 +219,98 @@
             // 
             // tcPreferencias
             // 
+            this.tcPreferencias.Controls.Add(this.label7);
+            this.tcPreferencias.Controls.Add(this.trackBar1);
+            this.tcPreferencias.Controls.Add(this.label6);
+            this.tcPreferencias.Controls.Add(this.comboBox1);
+            this.tcPreferencias.Controls.Add(this.label5);
+            this.tcPreferencias.Controls.Add(this.checkedListBox1);
+            this.tcPreferencias.Controls.Add(this.checkBox1);
             this.tcPreferencias.Location = new System.Drawing.Point(4, 25);
             this.tcPreferencias.Name = "tcPreferencias";
             this.tcPreferencias.Padding = new System.Windows.Forms.Padding(3);
-            this.tcPreferencias.Size = new System.Drawing.Size(768, 407);
+            this.tcPreferencias.Size = new System.Drawing.Size(768, 353);
             this.tcPreferencias.TabIndex = 1;
             this.tcPreferencias.Text = "Preferencias";
             this.tcPreferencias.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(331, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Hobbies";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Juegos",
+            "Musica",
+            "Baile",
+            "Programar",
+            "UNGA UNGA"});
+            this.checkedListBox1.Location = new System.Drawing.Point(334, 78);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
+            this.checkedListBox1.TabIndex = 2;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(96, 107);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(167, 20);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "¿Suscribirse al boletín?";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tcVisualizacion
             // 
             this.tcVisualizacion.Location = new System.Drawing.Point(4, 25);
             this.tcVisualizacion.Name = "tcVisualizacion";
             this.tcVisualizacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tcVisualizacion.Size = new System.Drawing.Size(768, 407);
+            this.tcVisualizacion.Size = new System.Drawing.Size(768, 353);
             this.tcVisualizacion.TabIndex = 2;
             this.tcVisualizacion.Text = "Visualización";
             this.tcVisualizacion.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // comboBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Genero";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(557, 107);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(553, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Pais de Residencia";
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(106, 251);
+            this.trackBar1.Minimum = 1;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(554, 56);
+            this.trackBar1.TabIndex = 6;
+            this.trackBar1.Value = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(103, 222);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 16);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "¿Nota para la aplicación?";
             // 
             // Form1
             // 
@@ -245,6 +328,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).EndInit();
             this.panelRadioB.ResumeLayout(false);
             this.panelRadioB.PerformLayout();
+            this.tcPreferencias.ResumeLayout(false);
+            this.tcPreferencias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,6 +355,13 @@
         private System.Windows.Forms.Label lbEdad;
         private System.Windows.Forms.Panel panelRadioB;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
