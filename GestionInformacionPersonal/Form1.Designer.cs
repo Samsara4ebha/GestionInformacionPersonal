@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tcDatospersonales = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -53,12 +54,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label7 = new System.Windows.Forms.Label();
+            this.pbImagenPerfil = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelFecha = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lbFechaHora = new System.Windows.Forms.Label();
             this.tcDatospersonales.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.panelRadioB.SuspendLayout();
             this.tcPreferencias.SuspendLayout();
+            this.tcVisualizacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDatospersonales
@@ -269,6 +277,9 @@
             // 
             // tcVisualizacion
             // 
+            this.tcVisualizacion.Controls.Add(this.lbFechaHora);
+            this.tcVisualizacion.Controls.Add(this.labelFecha);
+            this.tcVisualizacion.Controls.Add(this.pbImagenPerfil);
             this.tcVisualizacion.Location = new System.Drawing.Point(4, 25);
             this.tcVisualizacion.Name = "tcVisualizacion";
             this.tcVisualizacion.Padding = new System.Windows.Forms.Padding(3);
@@ -312,6 +323,32 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "¿Nota para la aplicación?";
             // 
+            // pbImagenPerfil
+            // 
+            this.pbImagenPerfil.Location = new System.Drawing.Point(63, 78);
+            this.pbImagenPerfil.Name = "pbImagenPerfil";
+            this.pbImagenPerfil.Size = new System.Drawing.Size(182, 177);
+            this.pbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbImagenPerfil.TabIndex = 0;
+            this.pbImagenPerfil.TabStop = false;
+            // 
+            // labelFecha
+            // 
+            this.labelFecha.AutoSize = true;
+            this.labelFecha.Location = new System.Drawing.Point(369, 126);
+            this.labelFecha.Name = "labelFecha";
+            this.labelFecha.Size = new System.Drawing.Size(139, 16);
+            this.labelFecha.TabIndex = 1;
+            this.labelFecha.Text = "Fecha y hora actuales";
+            // 
+            // lbFechaHora
+            // 
+            this.lbFechaHora.AutoSize = true;
+            this.lbFechaHora.Location = new System.Drawing.Point(372, 159);
+            this.lbFechaHora.Name = "lbFechaHora";
+            this.lbFechaHora.Size = new System.Drawing.Size(0, 16);
+            this.lbFechaHora.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,7 +367,10 @@
             this.panelRadioB.PerformLayout();
             this.tcPreferencias.ResumeLayout(false);
             this.tcPreferencias.PerformLayout();
+            this.tcVisualizacion.ResumeLayout(false);
+            this.tcVisualizacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,6 +402,11 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labelFecha;
+        private System.Windows.Forms.PictureBox pbImagenPerfil;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lbFechaHora;
     }
 }
 
