@@ -16,5 +16,10 @@ namespace GestionInformacionPersonal
         {
             InitializeComponent();
         }
+
+        private void nudEdad_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
