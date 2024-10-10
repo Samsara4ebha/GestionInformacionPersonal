@@ -54,13 +54,14 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tcVisualizacion = new System.Windows.Forms.TabPage();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.btnCambiarFoto = new System.Windows.Forms.Button();
             this.lbFechaHora = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.pbImagenPerfil = new System.Windows.Forms.PictureBox();
             this.tTemporizador = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnCambiarFoto = new System.Windows.Forms.Button();
-            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblFechaCalendario = new System.Windows.Forms.Label();
             this.tcDatospersonales.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
@@ -77,7 +78,7 @@
             this.tcDatospersonales.Controls.Add(this.tcPreferencias);
             this.tcDatospersonales.Controls.Add(this.tcVisualizacion);
             this.tcDatospersonales.Location = new System.Drawing.Point(2, 2);
-            this.tcDatospersonales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcDatospersonales.Margin = new System.Windows.Forms.Padding(2);
             this.tcDatospersonales.Name = "tcDatospersonales";
             this.tcDatospersonales.SelectedIndex = 0;
             this.tcDatospersonales.Size = new System.Drawing.Size(605, 315);
@@ -85,6 +86,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblFechaCalendario);
             this.tabPage1.Controls.Add(this.monthCalendar1);
             this.tabPage1.Controls.Add(this.nudEdad);
             this.tabPage1.Controls.Add(this.lbEdad);
@@ -96,9 +98,9 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(597, 289);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Personales";
@@ -107,14 +109,15 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(390, 35);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 12;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // nudEdad
             // 
-            this.nudEdad.Location = new System.Drawing.Point(465, 236);
-            this.nudEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudEdad.Location = new System.Drawing.Point(476, 252);
+            this.nudEdad.Margin = new System.Windows.Forms.Padding(2);
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(90, 20);
             this.nudEdad.TabIndex = 11;
@@ -122,7 +125,7 @@
             // lbEdad
             // 
             this.lbEdad.AutoSize = true;
-            this.lbEdad.Location = new System.Drawing.Point(388, 240);
+            this.lbEdad.Location = new System.Drawing.Point(412, 259);
             this.lbEdad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEdad.Name = "lbEdad";
             this.lbEdad.Size = new System.Drawing.Size(32, 13);
@@ -138,7 +141,7 @@
             this.panelRadioB.Controls.Add(this.rbFemenino);
             this.panelRadioB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelRadioB.Location = new System.Drawing.Point(82, 148);
-            this.panelRadioB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelRadioB.Margin = new System.Windows.Forms.Padding(2);
             this.panelRadioB.Name = "panelRadioB";
             this.panelRadioB.Size = new System.Drawing.Size(199, 124);
             this.panelRadioB.TabIndex = 9;
@@ -157,7 +160,7 @@
             // 
             this.rbMasculino.AutoSize = true;
             this.rbMasculino.Location = new System.Drawing.Point(109, 19);
-            this.rbMasculino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMasculino.Margin = new System.Windows.Forms.Padding(2);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(73, 17);
             this.rbMasculino.TabIndex = 6;
@@ -169,7 +172,7 @@
             // 
             this.rbOtro.AutoSize = true;
             this.rbOtro.Location = new System.Drawing.Point(110, 89);
-            this.rbOtro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOtro.Margin = new System.Windows.Forms.Padding(2);
             this.rbOtro.Name = "rbOtro";
             this.rbOtro.Size = new System.Drawing.Size(45, 17);
             this.rbOtro.TabIndex = 8;
@@ -181,7 +184,7 @@
             // 
             this.rbFemenino.AutoSize = true;
             this.rbFemenino.Location = new System.Drawing.Point(110, 53);
-            this.rbFemenino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbFemenino.Margin = new System.Windows.Forms.Padding(2);
             this.rbFemenino.Name = "rbFemenino";
             this.rbFemenino.Size = new System.Drawing.Size(71, 17);
             this.rbFemenino.TabIndex = 7;
@@ -192,7 +195,7 @@
             // tbDireccion
             // 
             this.tbDireccion.Location = new System.Drawing.Point(190, 74);
-            this.tbDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(174, 20);
             this.tbDireccion.TabIndex = 5;
@@ -200,7 +203,7 @@
             // tbCorreo
             // 
             this.tbCorreo.Location = new System.Drawing.Point(190, 113);
-            this.tbCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.Size = new System.Drawing.Size(174, 20);
             this.tbCorreo.TabIndex = 4;
@@ -208,7 +211,7 @@
             // tbNombre
             // 
             this.tbNombre.Location = new System.Drawing.Point(190, 35);
-            this.tbNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(2);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(174, 20);
             this.tbNombre.TabIndex = 3;
@@ -253,9 +256,9 @@
             this.tcPreferencias.Controls.Add(this.checkedListBox1);
             this.tcPreferencias.Controls.Add(this.checkBox1);
             this.tcPreferencias.Location = new System.Drawing.Point(4, 22);
-            this.tcPreferencias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcPreferencias.Margin = new System.Windows.Forms.Padding(2);
             this.tcPreferencias.Name = "tcPreferencias";
-            this.tcPreferencias.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcPreferencias.Padding = new System.Windows.Forms.Padding(2);
             this.tcPreferencias.Size = new System.Drawing.Size(597, 289);
             this.tcPreferencias.TabIndex = 1;
             this.tcPreferencias.Text = "Preferencias";
@@ -274,7 +277,7 @@
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(80, 204);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(416, 45);
@@ -295,7 +298,7 @@
             // 
             this.cbPaises.FormattingEnabled = true;
             this.cbPaises.Location = new System.Drawing.Point(418, 87);
-            this.cbPaises.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbPaises.Margin = new System.Windows.Forms.Padding(2);
             this.cbPaises.Name = "cbPaises";
             this.cbPaises.Size = new System.Drawing.Size(92, 21);
             this.cbPaises.TabIndex = 4;
@@ -320,7 +323,7 @@
             "Programar",
             "UNGA UNGA"});
             this.checkedListBox1.Location = new System.Drawing.Point(250, 63);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(91, 64);
             this.checkedListBox1.TabIndex = 2;
@@ -329,7 +332,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(72, 87);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(136, 17);
             this.checkBox1.TabIndex = 1;
@@ -344,13 +347,32 @@
             this.tcVisualizacion.Controls.Add(this.labelFecha);
             this.tcVisualizacion.Controls.Add(this.pbImagenPerfil);
             this.tcVisualizacion.Location = new System.Drawing.Point(4, 22);
-            this.tcVisualizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcVisualizacion.Margin = new System.Windows.Forms.Padding(2);
             this.tcVisualizacion.Name = "tcVisualizacion";
-            this.tcVisualizacion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcVisualizacion.Padding = new System.Windows.Forms.Padding(2);
             this.tcVisualizacion.Size = new System.Drawing.Size(597, 289);
             this.tcVisualizacion.TabIndex = 2;
             this.tcVisualizacion.Text = "Visualización";
             this.tcVisualizacion.UseVisualStyleBackColor = true;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(280, 129);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(42, 13);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "Tiempo";
+            // 
+            // btnCambiarFoto
+            // 
+            this.btnCambiarFoto.Location = new System.Drawing.Point(69, 223);
+            this.btnCambiarFoto.Name = "btnCambiarFoto";
+            this.btnCambiarFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnCambiarFoto.TabIndex = 3;
+            this.btnCambiarFoto.Text = "Cambiar";
+            this.btnCambiarFoto.UseVisualStyleBackColor = true;
+            this.btnCambiarFoto.Click += new System.EventHandler(this.btnCambiarFoto_Click);
             // 
             // lbFechaHora
             // 
@@ -374,7 +396,7 @@
             // pbImagenPerfil
             // 
             this.pbImagenPerfil.Location = new System.Drawing.Point(19, 17);
-            this.pbImagenPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.pbImagenPerfil.Name = "pbImagenPerfil";
             this.pbImagenPerfil.Size = new System.Drawing.Size(182, 177);
             this.pbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,24 +407,14 @@
             // 
             this.tTemporizador.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnCambiarFoto
+            // lblFechaCalendario
             // 
-            this.btnCambiarFoto.Location = new System.Drawing.Point(69, 223);
-            this.btnCambiarFoto.Name = "btnCambiarFoto";
-            this.btnCambiarFoto.Size = new System.Drawing.Size(75, 23);
-            this.btnCambiarFoto.TabIndex = 3;
-            this.btnCambiarFoto.Text = "Cambiar";
-            this.btnCambiarFoto.UseVisualStyleBackColor = true;
-            this.btnCambiarFoto.Click += new System.EventHandler(this.btnCambiarFoto_Click);
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(280, 129);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(42, 13);
-            this.lblFecha.TabIndex = 4;
-            this.lblFecha.Text = "Tiempo";
+            this.lblFechaCalendario.AutoSize = true;
+            this.lblFechaCalendario.Location = new System.Drawing.Point(460, 205);
+            this.lblFechaCalendario.Name = "lblFechaCalendario";
+            this.lblFechaCalendario.Size = new System.Drawing.Size(37, 13);
+            this.lblFechaCalendario.TabIndex = 13;
+            this.lblFechaCalendario.Text = "Fecha";
             // 
             // Form1
             // 
@@ -411,7 +423,7 @@
             this.ClientSize = new System.Drawing.Size(610, 366);
             this.Controls.Add(this.tcDatospersonales);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión Avanzada de Información Personal";
@@ -466,6 +478,7 @@
         private System.Windows.Forms.Label lbFechaHora;
         private System.Windows.Forms.Button btnCambiarFoto;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblFechaCalendario;
     }
 }
 

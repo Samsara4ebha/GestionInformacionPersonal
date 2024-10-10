@@ -38,5 +38,10 @@ namespace GestionInformacionPersonal
         {
             lblFecha.Text = DateTime.Now.ToString();
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            lblFechaCalendario.Text = monthCalendar1.SelectionStart.ToString("dd/MM/yy");
+        }
     }
 }
