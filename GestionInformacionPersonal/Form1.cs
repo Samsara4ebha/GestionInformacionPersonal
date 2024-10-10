@@ -41,7 +41,7 @@ namespace GestionInformacionPersonal
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            lblFechaCalendario.Text = monthCalendar1.SelectionStart.ToString("dd/MM/yy");
+            lblFechaCalendario.Text = mcCalendario.SelectionStart.ToString("dd/MM/yy");
         }
 
                                     //Botones
@@ -106,6 +106,30 @@ namespace GestionInformacionPersonal
             }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string hobbies = "";
+            foreach (object item in cblHobbies.CheckedItems)
+            {
+                hobbies += item.ToString() + ", ";
+            }
 
+            MessageBox.Show("Datos Personales -----> " +
+                "\n-Nombre : " + tbNombre.Text +
+                "\n-Dirección : " + tbDireccion.Text +
+                "\n-Correo : " + tbCorreo.Text +
+                "\n-Genero : " + (rbFemenino.Checked ? "Femenino" : rbMasculino.Checked ? "Masculino" : "Otro") +
+                "\n-Edad : " + nudEdad.Value +
+                "\n-Fecha Nacimiento : " + mcCalendario.SelectionStart.ToString("dd/MM/yy") +
+                "\nPreferencias ------> " +
+                "\n¿Suscrito? : " + (cbSuscrito.Checked ? "Sí" : "No") +
+                "\nHobbies : " + hobbies +
+                "\nPais : " + cbPaises.SelectedItem +
+                "\nNota de la Aplicación : " + tbNota.Value +
+                "\nVisualización -----> " +
+                "\nFoto : " + (pbImagenPerfil.Image != null ? "Sí" : "No") +
+                "\nFecha informe : " + lblFecha.Text
+                );
+        }
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tcDatospersonales = new System.Windows.Forms.TabControl();
             this.tpDatos = new System.Windows.Forms.TabPage();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.mcCalendario = new System.Windows.Forms.MonthCalendar();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.lbEdad = new System.Windows.Forms.Label();
             this.pnRadioB = new System.Windows.Forms.Panel();
@@ -47,12 +47,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tpPreferencias = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.tbNota = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
             this.cbPaises = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cblHobbies = new System.Windows.Forms.CheckedListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbSuscrito = new System.Windows.Forms.CheckBox();
             this.tpVisualizacion = new System.Windows.Forms.TabPage();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnCambiarFoto = new System.Windows.Forms.Button();
@@ -64,12 +64,13 @@
             this.lblFechaCalendario = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.tcDatospersonales.SuspendLayout();
             this.tpDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.pnRadioB.SuspendLayout();
             this.tpPreferencias.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbNota)).BeginInit();
             this.tpVisualizacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPerfil)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             // tpDatos
             // 
             this.tpDatos.Controls.Add(this.lblFechaCalendario);
-            this.tpDatos.Controls.Add(this.monthCalendar1);
+            this.tpDatos.Controls.Add(this.mcCalendario);
             this.tpDatos.Controls.Add(this.nudEdad);
             this.tpDatos.Controls.Add(this.lbEdad);
             this.tpDatos.Controls.Add(this.pnRadioB);
@@ -108,13 +109,13 @@
             this.tpDatos.Text = "Datos Personales";
             this.tpDatos.UseVisualStyleBackColor = true;
             // 
-            // monthCalendar1
+            // mcCalendario
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(390, 35);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 12;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.mcCalendario.Location = new System.Drawing.Point(390, 35);
+            this.mcCalendario.Margin = new System.Windows.Forms.Padding(7);
+            this.mcCalendario.Name = "mcCalendario";
+            this.mcCalendario.TabIndex = 12;
+            this.mcCalendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // nudEdad
             // 
@@ -251,12 +252,12 @@
             // tpPreferencias
             // 
             this.tpPreferencias.Controls.Add(this.label7);
-            this.tpPreferencias.Controls.Add(this.trackBar1);
+            this.tpPreferencias.Controls.Add(this.tbNota);
             this.tpPreferencias.Controls.Add(this.label6);
             this.tpPreferencias.Controls.Add(this.cbPaises);
             this.tpPreferencias.Controls.Add(this.label5);
             this.tpPreferencias.Controls.Add(this.cblHobbies);
-            this.tpPreferencias.Controls.Add(this.checkBox1);
+            this.tpPreferencias.Controls.Add(this.cbSuscrito);
             this.tpPreferencias.Location = new System.Drawing.Point(4, 22);
             this.tpPreferencias.Margin = new System.Windows.Forms.Padding(2);
             this.tpPreferencias.Name = "tpPreferencias";
@@ -276,15 +277,15 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "¿Nota para la aplicación?";
             // 
-            // trackBar1
+            // tbNota
             // 
-            this.trackBar1.Location = new System.Drawing.Point(80, 204);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(416, 45);
-            this.trackBar1.TabIndex = 6;
-            this.trackBar1.Value = 1;
+            this.tbNota.Location = new System.Drawing.Point(80, 204);
+            this.tbNota.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNota.Minimum = 1;
+            this.tbNota.Name = "tbNota";
+            this.tbNota.Size = new System.Drawing.Size(416, 45);
+            this.tbNota.TabIndex = 6;
+            this.tbNota.Value = 1;
             // 
             // label6
             // 
@@ -330,16 +331,16 @@
             this.cblHobbies.Size = new System.Drawing.Size(91, 64);
             this.cblHobbies.TabIndex = 2;
             // 
-            // checkBox1
+            // cbSuscrito
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(72, 87);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(136, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "¿Suscribirse al boletín?";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbSuscrito.AutoSize = true;
+            this.cbSuscrito.Location = new System.Drawing.Point(72, 87);
+            this.cbSuscrito.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSuscrito.Name = "cbSuscrito";
+            this.cbSuscrito.Size = new System.Drawing.Size(136, 17);
+            this.cbSuscrito.TabIndex = 1;
+            this.cbSuscrito.Text = "¿Suscribirse al boletín?";
+            this.cbSuscrito.UseVisualStyleBackColor = true;
             // 
             // tpVisualizacion
             // 
@@ -438,12 +439,23 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(71, 331);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 366);
             this.ControlBox = false;
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.tcDatospersonales);
@@ -461,7 +473,7 @@
             this.pnRadioB.PerformLayout();
             this.tpPreferencias.ResumeLayout(false);
             this.tpPreferencias.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbNota)).EndInit();
             this.tpVisualizacion.ResumeLayout(false);
             this.tpVisualizacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPerfil)).EndInit();
@@ -484,16 +496,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar mcCalendario;
         private System.Windows.Forms.NumericUpDown nudEdad;
         private System.Windows.Forms.Label lbEdad;
         private System.Windows.Forms.Panel pnRadioB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox cblHobbies;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbSuscrito;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar tbNota;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbPaises;
         private System.Windows.Forms.Label labelFecha;
@@ -506,6 +518,7 @@
         private System.Windows.Forms.Label lblFechaCalendario;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
 
