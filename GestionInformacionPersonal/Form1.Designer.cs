@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tcDatospersonales = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tpDatos = new System.Windows.Forms.TabPage();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.lbEdad = new System.Windows.Forms.Label();
-            this.panelRadioB = new System.Windows.Forms.Panel();
+            this.pnRadioB = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbOtro = new System.Windows.Forms.RadioButton();
@@ -45,15 +45,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tcPreferencias = new System.Windows.Forms.TabPage();
+            this.tpPreferencias = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
             this.cbPaises = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.cblHobbies = new System.Windows.Forms.CheckedListBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.tcVisualizacion = new System.Windows.Forms.TabPage();
+            this.tpVisualizacion = new System.Windows.Forms.TabPage();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnCambiarFoto = new System.Windows.Forms.Button();
             this.lbFechaHora = new System.Windows.Forms.Label();
@@ -62,21 +62,23 @@
             this.tTemporizador = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lblFechaCalendario = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.tcDatospersonales.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tpDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
-            this.panelRadioB.SuspendLayout();
-            this.tcPreferencias.SuspendLayout();
+            this.pnRadioB.SuspendLayout();
+            this.tpPreferencias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.tcVisualizacion.SuspendLayout();
+            this.tpVisualizacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDatospersonales
             // 
-            this.tcDatospersonales.Controls.Add(this.tabPage1);
-            this.tcDatospersonales.Controls.Add(this.tcPreferencias);
-            this.tcDatospersonales.Controls.Add(this.tcVisualizacion);
+            this.tcDatospersonales.Controls.Add(this.tpDatos);
+            this.tcDatospersonales.Controls.Add(this.tpPreferencias);
+            this.tcDatospersonales.Controls.Add(this.tpVisualizacion);
             this.tcDatospersonales.Location = new System.Drawing.Point(2, 2);
             this.tcDatospersonales.Margin = new System.Windows.Forms.Padding(2);
             this.tcDatospersonales.Name = "tcDatospersonales";
@@ -84,27 +86,27 @@
             this.tcDatospersonales.Size = new System.Drawing.Size(605, 315);
             this.tcDatospersonales.TabIndex = 0;
             // 
-            // tabPage1
+            // tpDatos
             // 
-            this.tabPage1.Controls.Add(this.lblFechaCalendario);
-            this.tabPage1.Controls.Add(this.monthCalendar1);
-            this.tabPage1.Controls.Add(this.nudEdad);
-            this.tabPage1.Controls.Add(this.lbEdad);
-            this.tabPage1.Controls.Add(this.panelRadioB);
-            this.tabPage1.Controls.Add(this.tbDireccion);
-            this.tabPage1.Controls.Add(this.tbCorreo);
-            this.tabPage1.Controls.Add(this.tbNombre);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(597, 289);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Datos Personales";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpDatos.Controls.Add(this.lblFechaCalendario);
+            this.tpDatos.Controls.Add(this.monthCalendar1);
+            this.tpDatos.Controls.Add(this.nudEdad);
+            this.tpDatos.Controls.Add(this.lbEdad);
+            this.tpDatos.Controls.Add(this.pnRadioB);
+            this.tpDatos.Controls.Add(this.tbDireccion);
+            this.tpDatos.Controls.Add(this.tbCorreo);
+            this.tpDatos.Controls.Add(this.tbNombre);
+            this.tpDatos.Controls.Add(this.label3);
+            this.tpDatos.Controls.Add(this.label2);
+            this.tpDatos.Controls.Add(this.label1);
+            this.tpDatos.Location = new System.Drawing.Point(4, 22);
+            this.tpDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.tpDatos.Name = "tpDatos";
+            this.tpDatos.Padding = new System.Windows.Forms.Padding(2);
+            this.tpDatos.Size = new System.Drawing.Size(597, 289);
+            this.tpDatos.TabIndex = 0;
+            this.tpDatos.Text = "Datos Personales";
+            this.tpDatos.UseVisualStyleBackColor = true;
             // 
             // monthCalendar1
             // 
@@ -132,19 +134,19 @@
             this.lbEdad.TabIndex = 10;
             this.lbEdad.Text = "Edad";
             // 
-            // panelRadioB
+            // pnRadioB
             // 
-            this.panelRadioB.BackColor = System.Drawing.Color.IndianRed;
-            this.panelRadioB.Controls.Add(this.label4);
-            this.panelRadioB.Controls.Add(this.rbMasculino);
-            this.panelRadioB.Controls.Add(this.rbOtro);
-            this.panelRadioB.Controls.Add(this.rbFemenino);
-            this.panelRadioB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelRadioB.Location = new System.Drawing.Point(82, 148);
-            this.panelRadioB.Margin = new System.Windows.Forms.Padding(2);
-            this.panelRadioB.Name = "panelRadioB";
-            this.panelRadioB.Size = new System.Drawing.Size(199, 124);
-            this.panelRadioB.TabIndex = 9;
+            this.pnRadioB.BackColor = System.Drawing.Color.IndianRed;
+            this.pnRadioB.Controls.Add(this.label4);
+            this.pnRadioB.Controls.Add(this.rbMasculino);
+            this.pnRadioB.Controls.Add(this.rbOtro);
+            this.pnRadioB.Controls.Add(this.rbFemenino);
+            this.pnRadioB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnRadioB.Location = new System.Drawing.Point(82, 148);
+            this.pnRadioB.Margin = new System.Windows.Forms.Padding(2);
+            this.pnRadioB.Name = "pnRadioB";
+            this.pnRadioB.Size = new System.Drawing.Size(199, 124);
+            this.pnRadioB.TabIndex = 9;
             // 
             // label4
             // 
@@ -246,23 +248,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // tcPreferencias
+            // tpPreferencias
             // 
-            this.tcPreferencias.Controls.Add(this.label7);
-            this.tcPreferencias.Controls.Add(this.trackBar1);
-            this.tcPreferencias.Controls.Add(this.label6);
-            this.tcPreferencias.Controls.Add(this.cbPaises);
-            this.tcPreferencias.Controls.Add(this.label5);
-            this.tcPreferencias.Controls.Add(this.checkedListBox1);
-            this.tcPreferencias.Controls.Add(this.checkBox1);
-            this.tcPreferencias.Location = new System.Drawing.Point(4, 22);
-            this.tcPreferencias.Margin = new System.Windows.Forms.Padding(2);
-            this.tcPreferencias.Name = "tcPreferencias";
-            this.tcPreferencias.Padding = new System.Windows.Forms.Padding(2);
-            this.tcPreferencias.Size = new System.Drawing.Size(597, 289);
-            this.tcPreferencias.TabIndex = 1;
-            this.tcPreferencias.Text = "Preferencias";
-            this.tcPreferencias.UseVisualStyleBackColor = true;
+            this.tpPreferencias.Controls.Add(this.label7);
+            this.tpPreferencias.Controls.Add(this.trackBar1);
+            this.tpPreferencias.Controls.Add(this.label6);
+            this.tpPreferencias.Controls.Add(this.cbPaises);
+            this.tpPreferencias.Controls.Add(this.label5);
+            this.tpPreferencias.Controls.Add(this.cblHobbies);
+            this.tpPreferencias.Controls.Add(this.checkBox1);
+            this.tpPreferencias.Location = new System.Drawing.Point(4, 22);
+            this.tpPreferencias.Margin = new System.Windows.Forms.Padding(2);
+            this.tpPreferencias.Name = "tpPreferencias";
+            this.tpPreferencias.Padding = new System.Windows.Forms.Padding(2);
+            this.tpPreferencias.Size = new System.Drawing.Size(597, 289);
+            this.tpPreferencias.TabIndex = 1;
+            this.tpPreferencias.Text = "Preferencias";
+            this.tpPreferencias.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -313,20 +315,20 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Hobbies";
             // 
-            // checkedListBox1
+            // cblHobbies
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.cblHobbies.FormattingEnabled = true;
+            this.cblHobbies.Items.AddRange(new object[] {
             "Juegos",
             "Musica",
             "Baile",
             "Programar",
             "UNGA UNGA"});
-            this.checkedListBox1.Location = new System.Drawing.Point(250, 63);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(91, 64);
-            this.checkedListBox1.TabIndex = 2;
+            this.cblHobbies.Location = new System.Drawing.Point(250, 63);
+            this.cblHobbies.Margin = new System.Windows.Forms.Padding(2);
+            this.cblHobbies.Name = "cblHobbies";
+            this.cblHobbies.Size = new System.Drawing.Size(91, 64);
+            this.cblHobbies.TabIndex = 2;
             // 
             // checkBox1
             // 
@@ -339,21 +341,21 @@
             this.checkBox1.Text = "¿Suscribirse al boletín?";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // tcVisualizacion
+            // tpVisualizacion
             // 
-            this.tcVisualizacion.Controls.Add(this.lblFecha);
-            this.tcVisualizacion.Controls.Add(this.btnCambiarFoto);
-            this.tcVisualizacion.Controls.Add(this.lbFechaHora);
-            this.tcVisualizacion.Controls.Add(this.labelFecha);
-            this.tcVisualizacion.Controls.Add(this.pbImagenPerfil);
-            this.tcVisualizacion.Location = new System.Drawing.Point(4, 22);
-            this.tcVisualizacion.Margin = new System.Windows.Forms.Padding(2);
-            this.tcVisualizacion.Name = "tcVisualizacion";
-            this.tcVisualizacion.Padding = new System.Windows.Forms.Padding(2);
-            this.tcVisualizacion.Size = new System.Drawing.Size(597, 289);
-            this.tcVisualizacion.TabIndex = 2;
-            this.tcVisualizacion.Text = "Visualización";
-            this.tcVisualizacion.UseVisualStyleBackColor = true;
+            this.tpVisualizacion.Controls.Add(this.lblFecha);
+            this.tpVisualizacion.Controls.Add(this.btnCambiarFoto);
+            this.tpVisualizacion.Controls.Add(this.lbFechaHora);
+            this.tpVisualizacion.Controls.Add(this.labelFecha);
+            this.tpVisualizacion.Controls.Add(this.pbImagenPerfil);
+            this.tpVisualizacion.Location = new System.Drawing.Point(4, 22);
+            this.tpVisualizacion.Margin = new System.Windows.Forms.Padding(2);
+            this.tpVisualizacion.Name = "tpVisualizacion";
+            this.tpVisualizacion.Padding = new System.Windows.Forms.Padding(2);
+            this.tpVisualizacion.Size = new System.Drawing.Size(597, 289);
+            this.tpVisualizacion.TabIndex = 2;
+            this.tpVisualizacion.Text = "Visualización";
+            this.tpVisualizacion.UseVisualStyleBackColor = true;
             // 
             // lblFecha
             // 
@@ -416,11 +418,34 @@
             this.lblFechaCalendario.TabIndex = 13;
             this.lblFechaCalendario.Text = "Fecha";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(469, 331);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(272, 331);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 366);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.tcDatospersonales);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -429,16 +454,16 @@
             this.Text = "Gestión Avanzada de Información Personal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tcDatospersonales.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tpDatos.ResumeLayout(false);
+            this.tpDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).EndInit();
-            this.panelRadioB.ResumeLayout(false);
-            this.panelRadioB.PerformLayout();
-            this.tcPreferencias.ResumeLayout(false);
-            this.tcPreferencias.PerformLayout();
+            this.pnRadioB.ResumeLayout(false);
+            this.pnRadioB.PerformLayout();
+            this.tpPreferencias.ResumeLayout(false);
+            this.tpPreferencias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.tcVisualizacion.ResumeLayout(false);
-            this.tcVisualizacion.PerformLayout();
+            this.tpVisualizacion.ResumeLayout(false);
+            this.tpVisualizacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPerfil)).EndInit();
             this.ResumeLayout(false);
 
@@ -447,9 +472,9 @@
         #endregion
 
         private System.Windows.Forms.TabControl tcDatospersonales;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tcPreferencias;
-        private System.Windows.Forms.TabPage tcVisualizacion;
+        private System.Windows.Forms.TabPage tpDatos;
+        private System.Windows.Forms.TabPage tpPreferencias;
+        private System.Windows.Forms.TabPage tpVisualizacion;
         private System.Windows.Forms.RadioButton rbOtro;
         private System.Windows.Forms.RadioButton rbFemenino;
         private System.Windows.Forms.RadioButton rbMasculino;
@@ -462,9 +487,9 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.NumericUpDown nudEdad;
         private System.Windows.Forms.Label lbEdad;
-        private System.Windows.Forms.Panel panelRadioB;
+        private System.Windows.Forms.Panel pnRadioB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox cblHobbies;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -479,6 +504,8 @@
         private System.Windows.Forms.Button btnCambiarFoto;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblFechaCalendario;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 
