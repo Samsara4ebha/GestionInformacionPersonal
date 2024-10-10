@@ -17,6 +17,11 @@ namespace GestionInformacionPersonal
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            tTemporizador.Start();
+        }
+
         private void btnCambiarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialogo = new OpenFileDialog();
@@ -24,6 +29,11 @@ namespace GestionInformacionPersonal
             dialogo.ShowDialog();
             string ruta = dialogo.FileName;
             pbImagenPerfil.Image = Image.FromFile(ruta);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToString();
         }
     }
 }

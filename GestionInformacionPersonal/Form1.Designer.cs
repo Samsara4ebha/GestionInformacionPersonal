@@ -57,9 +57,10 @@
             this.lbFechaHora = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.pbImagenPerfil = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tTemporizador = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCambiarFoto = new System.Windows.Forms.Button();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.tcDatospersonales.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
@@ -75,11 +76,11 @@
             this.tcDatospersonales.Controls.Add(this.tabPage1);
             this.tcDatospersonales.Controls.Add(this.tcPreferencias);
             this.tcDatospersonales.Controls.Add(this.tcVisualizacion);
-            this.tcDatospersonales.Location = new System.Drawing.Point(9, 2);
+            this.tcDatospersonales.Location = new System.Drawing.Point(2, 2);
             this.tcDatospersonales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcDatospersonales.Name = "tcDatospersonales";
             this.tcDatospersonales.SelectedIndex = 0;
-            this.tcDatospersonales.Size = new System.Drawing.Size(582, 310);
+            this.tcDatospersonales.Size = new System.Drawing.Size(605, 315);
             this.tcDatospersonales.TabIndex = 0;
             // 
             // tabPage1
@@ -98,7 +99,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(574, 284);
+            this.tabPage1.Size = new System.Drawing.Size(597, 289);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Personales";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -255,7 +256,7 @@
             this.tcPreferencias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcPreferencias.Name = "tcPreferencias";
             this.tcPreferencias.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tcPreferencias.Size = new System.Drawing.Size(574, 284);
+            this.tcPreferencias.Size = new System.Drawing.Size(597, 289);
             this.tcPreferencias.TabIndex = 1;
             this.tcPreferencias.Text = "Preferencias";
             this.tcPreferencias.UseVisualStyleBackColor = true;
@@ -337,6 +338,7 @@
             // 
             // tcVisualizacion
             // 
+            this.tcVisualizacion.Controls.Add(this.lblFecha);
             this.tcVisualizacion.Controls.Add(this.btnCambiarFoto);
             this.tcVisualizacion.Controls.Add(this.lbFechaHora);
             this.tcVisualizacion.Controls.Add(this.labelFecha);
@@ -345,7 +347,7 @@
             this.tcVisualizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcVisualizacion.Name = "tcVisualizacion";
             this.tcVisualizacion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tcVisualizacion.Size = new System.Drawing.Size(574, 284);
+            this.tcVisualizacion.Size = new System.Drawing.Size(597, 289);
             this.tcVisualizacion.TabIndex = 2;
             this.tcVisualizacion.Text = "Visualización";
             this.tcVisualizacion.UseVisualStyleBackColor = true;
@@ -379,6 +381,10 @@
             this.pbImagenPerfil.TabIndex = 0;
             this.pbImagenPerfil.TabStop = false;
             // 
+            // tTemporizador
+            // 
+            this.tTemporizador.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // btnCambiarFoto
             // 
             this.btnCambiarFoto.Location = new System.Drawing.Point(69, 223);
@@ -388,6 +394,15 @@
             this.btnCambiarFoto.Text = "Cambiar";
             this.btnCambiarFoto.UseVisualStyleBackColor = true;
             this.btnCambiarFoto.Click += new System.EventHandler(this.btnCambiarFoto_Click);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(280, 129);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(42, 13);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "Tiempo";
             // 
             // Form1
             // 
@@ -400,6 +415,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión Avanzada de Información Personal";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tcDatospersonales.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -445,10 +461,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.PictureBox pbImagenPerfil;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tTemporizador;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lbFechaHora;
         private System.Windows.Forms.Button btnCambiarFoto;
+        private System.Windows.Forms.Label lblFecha;
     }
 }
 
