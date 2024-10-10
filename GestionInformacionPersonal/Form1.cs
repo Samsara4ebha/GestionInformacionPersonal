@@ -23,6 +23,11 @@ namespace GestionInformacionPersonal
 
             string[] paises = { "España", "Bolivia", "Francia", "Chile", "Alemania", "Ecuador", "Eduardo", "Perú", "Alfredo", "Venezuela" };
             cbPaises.Items.AddRange(paises);
+
+            ttPuntero.SetToolTip(btnCambiarFoto, "Cambiar Foto");
+            ttPuntero.SetToolTip(btnSalir, "Salir");
+            ttPuntero.SetToolTip(btnLimpiar, "Limpiar");
+            ttPuntero.SetToolTip(btnGuardar, "Guardar");
         }
 
         private void btnCambiarFoto_Click(object sender, EventArgs e)
