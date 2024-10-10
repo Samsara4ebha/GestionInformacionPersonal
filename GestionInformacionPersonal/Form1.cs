@@ -20,6 +20,9 @@ namespace GestionInformacionPersonal
         private void Form1_Load(object sender, EventArgs e)
         {
             tTemporizador.Start();
+
+            string[] paises = { "España", "Bolivia", "Francia", "Chile", "Alemania", "Ecuador", "Eduardo", "Perú", "Alfredo", "Venezuela" };
+            cbPaises.Items.AddRange(paises);
         }
 
         private void btnCambiarFoto_Click(object sender, EventArgs e)

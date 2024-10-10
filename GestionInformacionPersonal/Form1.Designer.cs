@@ -49,7 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbPaises = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -248,7 +248,7 @@
             this.tcPreferencias.Controls.Add(this.label7);
             this.tcPreferencias.Controls.Add(this.trackBar1);
             this.tcPreferencias.Controls.Add(this.label6);
-            this.tcPreferencias.Controls.Add(this.comboBox1);
+            this.tcPreferencias.Controls.Add(this.cbPaises);
             this.tcPreferencias.Controls.Add(this.label5);
             this.tcPreferencias.Controls.Add(this.checkedListBox1);
             this.tcPreferencias.Controls.Add(this.checkBox1);
@@ -291,14 +291,14 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Pais de Residencia";
             // 
-            // comboBox1
+            // cbPaises
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(418, 87);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbPaises.FormattingEnabled = true;
+            this.cbPaises.Location = new System.Drawing.Point(418, 87);
+            this.cbPaises.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbPaises.Name = "cbPaises";
+            this.cbPaises.Size = new System.Drawing.Size(92, 21);
+            this.cbPaises.TabIndex = 4;
             // 
             // label5
             // 
@@ -458,7 +458,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbPaises;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.PictureBox pbImagenPerfil;
         private System.Windows.Forms.Timer tTemporizador;
