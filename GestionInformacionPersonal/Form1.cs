@@ -16,5 +16,14 @@ namespace GestionInformacionPersonal
         {
             InitializeComponent();
         }
+
+        private void btnCambiarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialogo = new OpenFileDialog();
+            dialogo.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png";
+            dialogo.ShowDialog();
+            string ruta = dialogo.FileName;
+            pbImagenPerfil.Image = Image.FromFile(ruta);
+        }
     }
 }
