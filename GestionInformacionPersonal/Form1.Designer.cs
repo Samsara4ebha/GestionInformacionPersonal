@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tcDatospersonales = new System.Windows.Forms.TabControl();
             this.tpDatos = new System.Windows.Forms.TabPage();
+            this.lblFechaCalendario = new System.Windows.Forms.Label();
             this.mcCalendario = new System.Windows.Forms.MonthCalendar();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.lbEdad = new System.Windows.Forms.Label();
@@ -60,8 +61,7 @@
             this.labelFecha = new System.Windows.Forms.Label();
             this.pbImagenPerfil = new System.Windows.Forms.PictureBox();
             this.tTemporizador = new System.Windows.Forms.Timer(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblFechaCalendario = new System.Windows.Forms.Label();
+            this.ttPuntero = new System.Windows.Forms.ToolTip(this.components);
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -84,11 +84,12 @@
             this.tcDatospersonales.Margin = new System.Windows.Forms.Padding(2);
             this.tcDatospersonales.Name = "tcDatospersonales";
             this.tcDatospersonales.SelectedIndex = 0;
-            this.tcDatospersonales.Size = new System.Drawing.Size(605, 315);
+            this.tcDatospersonales.Size = new System.Drawing.Size(665, 337);
             this.tcDatospersonales.TabIndex = 0;
             // 
             // tpDatos
             // 
+            this.tpDatos.BackColor = System.Drawing.Color.RosyBrown;
             this.tpDatos.Controls.Add(this.lblFechaCalendario);
             this.tpDatos.Controls.Add(this.mcCalendario);
             this.tpDatos.Controls.Add(this.nudEdad);
@@ -104,14 +105,22 @@
             this.tpDatos.Margin = new System.Windows.Forms.Padding(2);
             this.tpDatos.Name = "tpDatos";
             this.tpDatos.Padding = new System.Windows.Forms.Padding(2);
-            this.tpDatos.Size = new System.Drawing.Size(597, 289);
+            this.tpDatos.Size = new System.Drawing.Size(657, 311);
             this.tpDatos.TabIndex = 0;
             this.tpDatos.Text = "Datos Personales";
-            this.tpDatos.UseVisualStyleBackColor = true;
+            // 
+            // lblFechaCalendario
+            // 
+            this.lblFechaCalendario.AutoSize = true;
+            this.lblFechaCalendario.Location = new System.Drawing.Point(513, 191);
+            this.lblFechaCalendario.Name = "lblFechaCalendario";
+            this.lblFechaCalendario.Size = new System.Drawing.Size(37, 13);
+            this.lblFechaCalendario.TabIndex = 13;
+            this.lblFechaCalendario.Text = "Fecha";
             // 
             // mcCalendario
             // 
-            this.mcCalendario.Location = new System.Drawing.Point(390, 35);
+            this.mcCalendario.Location = new System.Drawing.Point(446, 22);
             this.mcCalendario.Margin = new System.Windows.Forms.Padding(7);
             this.mcCalendario.Name = "mcCalendario";
             this.mcCalendario.TabIndex = 12;
@@ -119,7 +128,7 @@
             // 
             // nudEdad
             // 
-            this.nudEdad.Location = new System.Drawing.Point(476, 252);
+            this.nudEdad.Location = new System.Drawing.Point(548, 252);
             this.nudEdad.Margin = new System.Windows.Forms.Padding(2);
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(90, 20);
@@ -128,25 +137,25 @@
             // lbEdad
             // 
             this.lbEdad.AutoSize = true;
-            this.lbEdad.Location = new System.Drawing.Point(412, 259);
+            this.lbEdad.Location = new System.Drawing.Point(443, 254);
             this.lbEdad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEdad.Name = "lbEdad";
-            this.lbEdad.Size = new System.Drawing.Size(32, 13);
+            this.lbEdad.Size = new System.Drawing.Size(41, 13);
             this.lbEdad.TabIndex = 10;
-            this.lbEdad.Text = "Edad";
+            this.lbEdad.Text = "Edad : ";
             // 
             // pnRadioB
             // 
-            this.pnRadioB.BackColor = System.Drawing.Color.IndianRed;
+            this.pnRadioB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnRadioB.Controls.Add(this.label4);
             this.pnRadioB.Controls.Add(this.rbMasculino);
             this.pnRadioB.Controls.Add(this.rbOtro);
             this.pnRadioB.Controls.Add(this.rbFemenino);
             this.pnRadioB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnRadioB.Location = new System.Drawing.Point(82, 148);
+            this.pnRadioB.Location = new System.Drawing.Point(83, 164);
             this.pnRadioB.Margin = new System.Windows.Forms.Padding(2);
             this.pnRadioB.Name = "pnRadioB";
-            this.pnRadioB.Size = new System.Drawing.Size(199, 124);
+            this.pnRadioB.Size = new System.Drawing.Size(281, 125);
             this.pnRadioB.TabIndex = 9;
             // 
             // label4
@@ -162,7 +171,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Location = new System.Drawing.Point(109, 19);
+            this.rbMasculino.Location = new System.Drawing.Point(110, 23);
             this.rbMasculino.Margin = new System.Windows.Forms.Padding(2);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(73, 17);
@@ -251,6 +260,7 @@
             // 
             // tpPreferencias
             // 
+            this.tpPreferencias.BackColor = System.Drawing.Color.RosyBrown;
             this.tpPreferencias.Controls.Add(this.label7);
             this.tpPreferencias.Controls.Add(this.tbNota);
             this.tpPreferencias.Controls.Add(this.label6);
@@ -262,15 +272,14 @@
             this.tpPreferencias.Margin = new System.Windows.Forms.Padding(2);
             this.tpPreferencias.Name = "tpPreferencias";
             this.tpPreferencias.Padding = new System.Windows.Forms.Padding(2);
-            this.tpPreferencias.Size = new System.Drawing.Size(597, 289);
+            this.tpPreferencias.Size = new System.Drawing.Size(657, 311);
             this.tpPreferencias.TabIndex = 1;
             this.tpPreferencias.Text = "Preferencias";
-            this.tpPreferencias.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(77, 180);
+            this.label7.Location = new System.Drawing.Point(77, 206);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 13);
@@ -279,18 +288,18 @@
             // 
             // tbNota
             // 
-            this.tbNota.Location = new System.Drawing.Point(80, 204);
+            this.tbNota.Location = new System.Drawing.Point(80, 231);
             this.tbNota.Margin = new System.Windows.Forms.Padding(2);
             this.tbNota.Minimum = 1;
             this.tbNota.Name = "tbNota";
-            this.tbNota.Size = new System.Drawing.Size(416, 45);
+            this.tbNota.Size = new System.Drawing.Size(505, 45);
             this.tbNota.TabIndex = 6;
             this.tbNota.Value = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(415, 72);
+            this.label6.Location = new System.Drawing.Point(448, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 13);
@@ -300,7 +309,7 @@
             // cbPaises
             // 
             this.cbPaises.FormattingEnabled = true;
-            this.cbPaises.Location = new System.Drawing.Point(418, 87);
+            this.cbPaises.Location = new System.Drawing.Point(451, 84);
             this.cbPaises.Margin = new System.Windows.Forms.Padding(2);
             this.cbPaises.Name = "cbPaises";
             this.cbPaises.Size = new System.Drawing.Size(92, 21);
@@ -309,7 +318,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(248, 48);
+            this.label5.Location = new System.Drawing.Point(110, 35);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
@@ -325,16 +334,16 @@
             "Baile",
             "Programar",
             "UNGA UNGA"});
-            this.cblHobbies.Location = new System.Drawing.Point(250, 63);
+            this.cblHobbies.Location = new System.Drawing.Point(113, 50);
             this.cblHobbies.Margin = new System.Windows.Forms.Padding(2);
             this.cblHobbies.Name = "cblHobbies";
-            this.cblHobbies.Size = new System.Drawing.Size(91, 64);
+            this.cblHobbies.Size = new System.Drawing.Size(98, 79);
             this.cblHobbies.TabIndex = 2;
             // 
             // cbSuscrito
             // 
             this.cbSuscrito.AutoSize = true;
-            this.cbSuscrito.Location = new System.Drawing.Point(72, 87);
+            this.cbSuscrito.Location = new System.Drawing.Point(255, 84);
             this.cbSuscrito.Margin = new System.Windows.Forms.Padding(2);
             this.cbSuscrito.Name = "cbSuscrito";
             this.cbSuscrito.Size = new System.Drawing.Size(136, 17);
@@ -344,6 +353,7 @@
             // 
             // tpVisualizacion
             // 
+            this.tpVisualizacion.BackColor = System.Drawing.Color.RosyBrown;
             this.tpVisualizacion.Controls.Add(this.lblFecha);
             this.tpVisualizacion.Controls.Add(this.btnCambiarFoto);
             this.tpVisualizacion.Controls.Add(this.lbFechaHora);
@@ -353,15 +363,14 @@
             this.tpVisualizacion.Margin = new System.Windows.Forms.Padding(2);
             this.tpVisualizacion.Name = "tpVisualizacion";
             this.tpVisualizacion.Padding = new System.Windows.Forms.Padding(2);
-            this.tpVisualizacion.Size = new System.Drawing.Size(597, 289);
+            this.tpVisualizacion.Size = new System.Drawing.Size(657, 311);
             this.tpVisualizacion.TabIndex = 2;
             this.tpVisualizacion.Text = "Visualización";
-            this.tpVisualizacion.UseVisualStyleBackColor = true;
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(280, 129);
+            this.lblFecha.Location = new System.Drawing.Point(427, 148);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(42, 13);
             this.lblFecha.TabIndex = 4;
@@ -369,7 +378,7 @@
             // 
             // btnCambiarFoto
             // 
-            this.btnCambiarFoto.Location = new System.Drawing.Point(69, 223);
+            this.btnCambiarFoto.Location = new System.Drawing.Point(151, 244);
             this.btnCambiarFoto.Name = "btnCambiarFoto";
             this.btnCambiarFoto.Size = new System.Drawing.Size(75, 23);
             this.btnCambiarFoto.TabIndex = 3;
@@ -380,7 +389,7 @@
             // lbFechaHora
             // 
             this.lbFechaHora.AutoSize = true;
-            this.lbFechaHora.Location = new System.Drawing.Point(279, 129);
+            this.lbFechaHora.Location = new System.Drawing.Point(273, 148);
             this.lbFechaHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFechaHora.Name = "lbFechaHora";
             this.lbFechaHora.Size = new System.Drawing.Size(0, 13);
@@ -389,7 +398,7 @@
             // labelFecha
             // 
             this.labelFecha.AutoSize = true;
-            this.labelFecha.Location = new System.Drawing.Point(277, 102);
+            this.labelFecha.Location = new System.Drawing.Point(427, 125);
             this.labelFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(112, 13);
@@ -398,7 +407,7 @@
             // 
             // pbImagenPerfil
             // 
-            this.pbImagenPerfil.Location = new System.Drawing.Point(19, 17);
+            this.pbImagenPerfil.Location = new System.Drawing.Point(100, 43);
             this.pbImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.pbImagenPerfil.Name = "pbImagenPerfil";
             this.pbImagenPerfil.Size = new System.Drawing.Size(182, 177);
@@ -410,50 +419,44 @@
             // 
             this.tTemporizador.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblFechaCalendario
-            // 
-            this.lblFechaCalendario.AutoSize = true;
-            this.lblFechaCalendario.Location = new System.Drawing.Point(460, 205);
-            this.lblFechaCalendario.Name = "lblFechaCalendario";
-            this.lblFechaCalendario.Size = new System.Drawing.Size(37, 13);
-            this.lblFechaCalendario.TabIndex = 13;
-            this.lblFechaCalendario.Text = "Fecha";
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(469, 331);
+            this.btnSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSalir.Location = new System.Drawing.Point(522, 359);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(96, 39);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(272, 331);
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLimpiar.Location = new System.Drawing.Point(304, 359);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(96, 39);
             this.btnLimpiar.TabIndex = 2;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(71, 331);
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGuardar.Location = new System.Drawing.Point(67, 359);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(96, 39);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 366);
+            this.ClientSize = new System.Drawing.Size(669, 432);
             this.ControlBox = false;
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnLimpiar);
@@ -511,7 +514,7 @@
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.PictureBox pbImagenPerfil;
         private System.Windows.Forms.Timer tTemporizador;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip ttPuntero;
         private System.Windows.Forms.Label lbFechaHora;
         private System.Windows.Forms.Button btnCambiarFoto;
         private System.Windows.Forms.Label lblFecha;
